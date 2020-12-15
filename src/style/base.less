@@ -1,0 +1,37 @@
+@import 'variables';
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  background-color: @base-bg-color;
+
+  body {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 1280px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.67em 0;
+  }
+  
+}
+
