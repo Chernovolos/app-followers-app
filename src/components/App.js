@@ -1,14 +1,21 @@
-import React from 'react';
-import '../style/index.less';
-import { Button } from 'antd';
+// outsource dependencies
+import React, {useEffect} from "react";
+import { useDispatch } from "react-redux";
+
+// local dependencies
+import "../style/index.less";
+import Layout from "./Layout.jsx";
+import { getUserProfile } from "../actions/user";
 
 
 const App = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(getUserProfile());
+    }, []);
+
   return (
-      <div>
-          <p className="font-test">Hello world FGJRKEJGNHEUOIL;</p>
-        <Button type="primary">Primary Button</Button>
-      </div>
+     <Layout/>
   )
 };
 
