@@ -4,8 +4,8 @@
   color: @color;
 }
 
-.responsive(@max-width, @rules) {
-  @media only screen and (max-width: @max-width) {
+.responsive(@min-width, @max-width, @rules) {
+  @media only screen and (min-width: @min-width) and  (max-width: @max-width){
     @rules();
   }
 }
